@@ -3,6 +3,9 @@ const app = express();
 app.get('/', (req, res) =>{
   res.send('Hello World !');
 })
-const server = app.listen(7000, () => {
-  console.log(`Express running -> Port: ${server.address().port}`);
+app.get('/contact', (req, res) =>{
+  res.send('Contact');
+})
+const server = app.listen(4000, 'localhost', () => {
+  console.log(`Express running`);
 })
